@@ -35,6 +35,7 @@ function canvas(){
     const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -47,8 +48,6 @@ window.addEventListener("resize", function () {
 
 function files(index) {
   var data = `
-  https://cyberfiction.io/images/loading.png
-  https://cyberfiction.io/images/CF-mint.png
   https://cyberfiction.io/images/CF-Avatar-01.png
   https://cyberfiction.io/images/CF-Avatar-02.png
   https://cyberfiction.io/images/CF-Avatar-03.png
@@ -531,12 +530,11 @@ function files(index) {
   https://cyberfiction.io/sequence/0467.png
   https://cyberfiction.io/sequence/0468.png
   https://cyberfiction.io/sequence/0469.png
-  https://cyberfiction.io/icon/favicon-32x32.png
  `;
   return data.split("\n")[index];
 }
 
-const frameCount = 485;
+const frameCount = 482;
 
 const images = [];
 const imageSeq = {
