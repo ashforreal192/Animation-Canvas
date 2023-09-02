@@ -536,7 +536,7 @@ function files(index) {
   return data.split("\n")[index];
 }
 
-const frameCount = 300;
+const frameCount = 485;
 
 const images = [];
 const imageSeq = {
@@ -592,7 +592,7 @@ function scaleImage(img, ctx) {
 }
 ScrollTrigger.create({
 
-  trigger: "// object you want to pin it.",
+  trigger: "#page>canvas",
   pin: true,
   // markers:true,
   scroller: `#main`,
@@ -601,4 +601,32 @@ ScrollTrigger.create({
   end: `600% top`,
 });
 }
+
+gsap.to("#page1",{
+  scrollTrigger:{
+    trigger:`#page1`,
+    start:`top top`,
+    end:`bottom top`,
+    pin:true,
+    scroller:`#main`
+  }
+})
+gsap.to("#page2",{
+  scrollTrigger:{
+    trigger:`#page2`,
+    start:`top top`,
+    end:`bottom top`,
+    pin:true,
+    scroller:`#main`
+  }
+})
+gsap.to("#page3",{
+  scrollTrigger:{
+    trigger:`#page3`,
+    start:`top top`,
+    end:`bottom top`,
+    pin:true,
+    scroller:`#main`
+  }
+})
 canvas()
