@@ -31,6 +31,10 @@ ScrollTrigger.refresh();
 }
 loco()
 
+
+
+
+
 function canvas(){
     const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
@@ -593,12 +597,24 @@ ScrollTrigger.create({
   trigger: "#page>canvas",
   pin: true,
   // markers:true,
-  scroller: `#main`,
+scroller: `#main`,
 //   set start end according to preference
   start: `top top`,
   end: `600% top`,
 });
 }
+
+
+// gsap.to("#page>canvas",
+// {
+//   scrollTrigger:{
+//     trigger:"#page>canvas",
+//     pin:true,
+//     scroller: `#main`,
+//     start:`top top`,
+//     end: `600% top`
+//   }
+// })
 
 gsap.to("#page1",{
   scrollTrigger:{
@@ -628,3 +644,4 @@ gsap.to("#page3",{
   }
 })
 canvas()
+
