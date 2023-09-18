@@ -554,14 +554,14 @@ for (let i = 0; i < frameCount; i++) {
 gsap.to(imageSeq, {
   frame: frameCount - 1,
   snap: "frame",
-  ease: `none`,
+  ease: "none",
   scrollTrigger: {
     scrub: 0.15,
-    trigger: `#page>canvas`,
+    trigger: "#page>canvas",
     //   set start end according to preference
-    start: `top top`,
-    end: `600% top`,
-    scroller: `#main`,
+    start: "top top",
+    end: "600% top",
+    scroller: "#main",
   },
   onUpdate: render,
 });
@@ -592,55 +592,45 @@ function scaleImage(img, ctx) {
     img.height * ratio
   );
 }
-ScrollTrigger.create({
 
+
+
+
+gsap.from("#page>canvas",{
   trigger: "#page>canvas",
   pin: true,
   // markers:true,
-scroller: `#main`,
+scroller: "#main",
 //   set start end according to preference
-  start: `top top`,
-  end: `600% top`,
+  start: "top top",
+  end: "600% top",
 });
 
-
-
-// gsap.to("#page>canvas",
-// {
-//   scrollTrigger:{
-//     trigger:"#page>canvas",
-//     pin:true,
-//     scroller: `#main`,
-//     start:`top top`,
-//     end: `600% top`
-//   }
-// })
-
-gsap.to("#page1",{
+gsap.from("#page1",{
   scrollTrigger:{
-    trigger:`#page1`,
-    start:`top top`,
-    end:`bottom top`,
+    trigger:"#page1",
+    scroller: "#main",
+    start:"top top",
+    end:"bottom top",
     pin:true,
-    scroller:`#main`
   }
 })
-gsap.to("#page2",{
+gsap.from("#page2",{
   scrollTrigger:{
-    trigger:`#page2`,
-    start:`top top`,
-    end:`bottom top`,
+    trigger:"#page2",
+    scroller: "#main",
+    start:"top top",
+    end:"bottom top",
     pin:true,
-    scroller:`#main`
   }
 })
-gsap.to("#page3",{
+gsap.from("#page3",{
   scrollTrigger:{
-    trigger:`#page3`,
-    start:`top top`,
-    end:`bottom top`,
+    trigger:"#page3",
+    scroller: "#main",
+    start:"top top",
+    end:"bottom top",
     pin:true,
-    scroller:`#main`
   }
 })}
 canvas()
