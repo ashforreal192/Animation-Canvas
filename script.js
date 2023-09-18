@@ -33,8 +33,6 @@ loco()
 
 
 
-
-
 function canvas(){
     const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
@@ -52,19 +50,6 @@ window.addEventListener("resize", function () {
 
 function files(index) {
   var data = `
-  https://cyberfiction.io/images/CF-Avatar-01.png
-  https://cyberfiction.io/images/CF-Avatar-02.png
-  https://cyberfiction.io/images/CF-Avatar-03.png
-  https://cyberfiction.io/images/CF-Avatar-04.png
-  https://cyberfiction.io/images/CF-Avatar-05.png
-  https://cyberfiction.io/images/CF-Avatar-06.png
-  https://cyberfiction.io/images/CF-Avatar-07.png
-  https://cyberfiction.io/images/CF-Avatar-08.png
-  https://cyberfiction.io/images/CF-Avatar-09.png
-  https://cyberfiction.io/images/CF-Avatar-10.png
-  https://cyberfiction.io/images/CF-Avatar-11.png
-  https://cyberfiction.io/images/CF-Avatar-12.png
-  https://cyberfiction.io/images/CyberFiction-Ryan.png
   https://cyberfiction.io/sequence/0001.png
   https://cyberfiction.io/sequence/0002.png
   https://cyberfiction.io/sequence/0003.png
@@ -538,7 +523,7 @@ function files(index) {
   return data.split("\n")[index];
 }
 
-const frameCount = 482;
+const frameCount = 469;
 
 const images = [];
 const imageSeq = {
@@ -551,7 +536,7 @@ for (let i = 0; i < frameCount; i++) {
   images.push(img);
 }
 
-gsap.to(imageSeq, {
+gsap.from(imageSeq, {
   frame: frameCount - 1,
   snap: "frame",
   ease: "none",
@@ -604,6 +589,7 @@ scroller: "#main",
 //   set start end according to preference
   start: "top top",
   end: "600% top",
+  scrub: true
 });
 
 gsap.from("#page1",{
@@ -613,6 +599,7 @@ gsap.from("#page1",{
     start:"top top",
     end:"bottom top",
     pin:true,
+    scrub: true
   }
 })
 gsap.from("#page2",{
@@ -622,6 +609,7 @@ gsap.from("#page2",{
     start:"top top",
     end:"bottom top",
     pin:true,
+    scrub: true
   }
 })
 gsap.from("#page3",{
@@ -631,6 +619,7 @@ gsap.from("#page3",{
     start:"top top",
     end:"bottom top",
     pin:true,
+    scrub: true
   }
 })}
 canvas()
