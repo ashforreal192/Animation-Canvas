@@ -602,7 +602,7 @@ scroller: `#main`,
   start: `top top`,
   end: `600% top`,
 });
-}
+
 
 
 // gsap.to("#page>canvas",
@@ -642,6 +642,6 @@ gsap.to("#page3",{
     pin:true,
     scroller:`#main`
   }
-})
+})}
 canvas()
 
